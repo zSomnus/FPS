@@ -1,9 +1,0 @@
-{
-	"files.exclude": {
-		"E:/OverwatchRe/.vscode": true,
-		"E:/OverwatchRe/Content": true,
-		"E:/OverwatchRe/DerivedDataCache": true,
-		"E:/OverwatchRe/Intermediate": true,
-		"E:/OverwatchRe/Saved": true
-	}
-}
