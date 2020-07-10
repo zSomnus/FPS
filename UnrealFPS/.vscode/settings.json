@@ -1,0 +1,9 @@
+{
+	"files.exclude": {
+		"D:/FPS/UnrealFPS/.vscode": true,
+		"D:/FPS/UnrealFPS/Content": true,
+		"D:/FPS/UnrealFPS/DerivedDataCache": true,
+		"D:/FPS/UnrealFPS/Intermediate": true,
+		"D:/FPS/UnrealFPS/Saved": true
+	}
+}
