@@ -2,7 +2,7 @@
 
 
 #include "Lucio.h"
-#include "UnrealFPSProjectile.h"
+#include "LucioProjectile.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SceneComponent.h"
 #include "Camera/CameraComponent.h"
@@ -33,6 +33,7 @@ ALucio::ALucio()
 	ArmMesh->bCastDynamicShadow = false;
 	ArmMesh->CastShadow = false;
 	ArmMesh->SetRelativeRotation(FRotator(1.9f, -19.19f, 5.2f));
+	// ArmMesh->SetRelativeRotation(FRotator(0.0f, 0.0f, 0.0f));
 	ArmMesh->SetRelativeLocation(FVector(-0.5f, -4.4f, -155.7f));
 
 	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMesh"));
@@ -113,7 +114,7 @@ void ALucio::OnFire()
 				ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
 				// spawn the projectile at the muzzle
-				World->SpawnActor<AUnrealFPSProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				World->SpawnActor<ALucioProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
 		}
 	}
 
@@ -137,7 +138,6 @@ void ALucio::OnFire()
 
 void ALucio::MoveForward(float Value)
 {
-	// GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Yellow, TEXT("Forward"));
 	if (Value != 0.0f)
 	{
 		// add movement in that direction
